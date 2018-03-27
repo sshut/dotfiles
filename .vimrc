@@ -22,7 +22,8 @@ set listchars=tab:>\ "二文字目を消すにはバックスラッシュのあとにコメントが必須
 "タブの色
 autocmd ColorScheme * highlight SpecialKey ctermfg=238 guifg=#008800
 
-colorscheme molokai		"カラースキーマの指定
+"colorscheme molokai		"カラースキーマの指定
+colorscheme moonshine		"カラースキーマの指定
 
 "-----------------------------------------------------------
 set nrformats-=octal			"0で始まる数字を8進数で扱わない
