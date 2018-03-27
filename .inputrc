@@ -1,0 +1,6 @@
+#補完時大文字小文字を無視
+set completion-ignore-case on 
+
+# 入力候補リストのディレクトリや実行可能ファイルに印をつける
+set show-all-if-ambiguous on
+set visible-stats on
