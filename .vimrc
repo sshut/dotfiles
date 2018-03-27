@@ -1,4 +1,5 @@
 "標準的な設定-----------------------------------------------
+set nocompatible		"viと互換性をとらない
 set number				"行番号を表示
 set title				"ターミナルのタイトルをセット
 set ambiwidth=double	"全角文字の幅を2に固定
@@ -6,16 +7,22 @@ set tabstop=4			"タブ幅をスペース4つ分に固定
 "set expandtab			"タブキーでスペースが挿入される
 set shiftwidth=4		"vimが自動生成するタブ幅をスペース4つ分にする
 set smartindent			"自動インデント
-set nobackup			"bバックアップをとらない
+"set nobackup			"bバックアップをとらない
 
-"カラースキーマ--------------------------------------------
-colorscheme molokai
+"色関連の設定--------------------------------------------
+ "コメントを濃い緑にする colorschemeの前に設定する必要あり
+ "ctermfg:ターミナルの色
+ "guifg:GUI版Vimの前景色
+autocmd ColorScheme * highlight Comment ctermfg=29 guifg=#008800
 
-"タブ、空白、改行の可視化-----------------------------------
+"タブ、空白、改行の可視化--------------
 set list				"空白文字の可視化
-set listchars=tab:ﾂｻ_,trail:-,extends:ﾂｻ,precedes:ﾂｫ,nbsp:% "空白文字の表示形式
+"set listchars=tab:ﾂｻ_,trail:-,extends:ﾂｻ,precedes:ﾂｫ,nbsp:% "空白文字の表示形式
+set listchars=tab:>\ "二文字目を消すにはバックスラッシュのあとにコメントが必須
 "タブの色
-"hi SpecialKey ctermfg=237 guifg=#3a3a3a
+autocmd ColorScheme * highlight SpecialKey ctermfg=238 guifg=#008800
+
+colorscheme molokai		"カラースキーマの指定
 
 "-----------------------------------------------------------
 set nrformats-=octal			"0で始まる数字を8進数で扱わない
@@ -29,8 +36,8 @@ set wildmode=longest,full		"ファイル名のタブ補完 wildmenuとセット
 set encoding=utf-8				"vimの内部文字コード
 set fileencodings=iso-2022-jp,cp932,sjis,euc-jp,utf-8	"読み込み時の文字コード 左から試す
 set tags+=tags					"tagファイルを親ディレクトリへ探しに行く
-let Tlist_Use_Right_Window = 1                    "右側にtag listのウインドうを表示する
-let Tlist_Exit_OnlyWindow = 1                      "taglistのウインドウだけならVimを閉じる
+"let Tlist_Use_Right_Window = 1                    "右側にtag listのウインドうを表示する
+"let Tlist_Exit_OnlyWindow = 1                      "taglistのウインドウだけならVimを閉じる
 
 " grでカーソル下のキーワードをvimgrep------------------------
 " nnoremap <expr> gr ':vimgrep ;\<' . expand('<cword>') . '\>; **/*.c **/*.cpp **/*.h \| cw'
