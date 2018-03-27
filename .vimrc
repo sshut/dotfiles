@@ -6,11 +6,16 @@ set tabstop=4			"タブ幅をスペース4つ分に固定
 "set expandtab			"タブキーでスペースが挿入される
 set shiftwidth=4		"vimが自動生成するタブ幅をスペース4つ分にする
 set smartindent			"自動インデント
+set nobackup			"bバックアップをとらない
+
+"カラースキーマ--------------------------------------------
+colorscheme molokai
+
 "タブ、空白、改行の可視化-----------------------------------
 set list				"空白文字の可視化
 set listchars=tab:ﾂｻ_,trail:-,extends:ﾂｻ,precedes:ﾂｫ,nbsp:% "空白文字の表示形式
 "タブの色
-hi SpecialKey ctermfg=237 guifg=#3a3a3a
+"hi SpecialKey ctermfg=237 guifg=#3a3a3a
 
 "-----------------------------------------------------------
 set nrformats-=octal			"0で始まる数字を8進数で扱わない
