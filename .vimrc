@@ -33,6 +33,17 @@ autocmd ColorScheme * highlight CursorLine cterm=underline ctermfg=NONE ctermbg=
 colorscheme molokai
 "colorscheme moonshine
 
+"ステータスバー関連----------------------------------------
+set statusline=%F				" ファイル名表示
+set statusline+=%m				" 変更チェック表示
+set statusline+=%r				" 読み込み専用かどうか表示
+set statusline+=%h				" ヘルプページなら[HELP]と表示
+set statusline+=%w				" プレビューウインドウなら[Prevew]と表示
+set statusline+=%=				" これ以降は右寄せ表示
+set statusline+=[ENC=%{&fileencoding}]	" file encoding
+set statusline+=[LOW=%l/%L]		" 現在行数/全行数
+set laststatus=2				" ステータスラインを常に表示(0:表示しない、1:2つ以上ウィンドウがある時だけ表示)
+
 "-----------------------------------------------------------
 set nrformats-=octal			"0で始まる数字を8進数で扱わない
 set hidden						"ファイルの保存をしていなくても、べつのファイルを開けるようにする
