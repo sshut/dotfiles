@@ -41,7 +41,8 @@ set statusline+=%h				" ヘルプページなら[HELP]と表示
 set statusline+=%w				" プレビューウインドウなら[Prevew]と表示
 set statusline+=%=				" これ以降は右寄せ表示
 set statusline+=[ENC=%{&fileencoding}]	" file encoding
-set statusline+=[LOW=%l/%L]		" 現在行数/全行数
+set statusline+=[LOW=%l/%L		" 現在行数/全行数
+set statusline+=(%P)]			" 全行数に対する割合 
 set laststatus=2				" ステータスラインを常に表示(0:表示しない、1:2つ以上ウィンドウがある時だけ表示)
 
 "-----------------------------------------------------------
