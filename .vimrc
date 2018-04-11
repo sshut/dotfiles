@@ -11,23 +11,23 @@ set smartindent			"自動インデント
 
 "色関連の設定--------------------------------------------
  "コメントを濃い緑にする colorschemeの前に設定する必要あり
- "ctermfg:ターミナルの色
- "guifg:GUI版Vimの前景色
-autocmd ColorScheme * highlight Comment ctermfg=29 guifg=#008800
+   "ctermfg:ターミナルの色
+   "guifg:GUI版Vimの前景色
+autocmd ColorScheme * highlight Comment ctermfg=34 guifg=#008800 
 
 "タブ、空白、改行の可視化--------------
 set list				"空白文字の可視化
 "set listchars=tab:ﾂｻ_,trail:-,extends:ﾂｻ,precedes:ﾂｫ,nbsp:% "空白文字の表示形式
 set listchars=tab:>\ "二文字目を消すにはバックスラッシュのあとにコメントが必須
 "タブの色
-autocmd ColorScheme * highlight SpecialKey ctermfg=238 guifg=#008800
+"autocmd ColorScheme * highlight SpecialKey ctermfg=238 guifg=#008800
 
 
 " カレント行ハイライトON
-set cursorline
+"set cursorline
 " アンダーラインを引く(color terminal)
-"highlight CursorLine cterm=underline ctermfg=NONE ctermbg=NONE
 autocmd ColorScheme * highlight CursorLine cterm=underline ctermfg=NONE ctermbg=NONE
+"autocmd ColorScheme * highlight SpecialKey ctermfg=238 guifg=#008800
 
 "カラースキーマの指定
 colorscheme molokai
@@ -117,7 +117,7 @@ nnoremap sB :<C-u>Unite buffer -buffer-name=file<CR>
 "call submode#map('bufmove', 'n', '', '+', '<C-w>+')
 "call submode#map('bufmove', 'n', '', '-', '<C-w>-')
 "gtags用------------------------------
-map <C-h> :Gtags -f %<CR>
+"map <C-h> :Gtags -f %<CR> "この設定を有効にするとバックスペースもGtags -f になってしまう
 map <C-j> :GtagsCursor<CR>
 map <C-n> :cn<CR>
 map <C-p> :cp<CR>
