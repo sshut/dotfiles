@@ -53,7 +53,9 @@ set virtualedit=block			"文字のないところにカーソル移動できるようにする
 set whichwrap=b,s,[,],<,>		"カーソルの回り込みができるようになる
 set backspace=indent,eol,start	"バックスペースを、空白、行末、行頭でも使えるようにする
 set wildmenu
-set wildmode=longest,full		"ファイル名のタブ補完 wildmenuとセット
+set wildignorecase				"ファイル名のタブ保管時に大文字小文字を区別しない wildmenuとセット
+"set wildmode=longest,full		"ファイル名のタブ補完 wildmenuとセット
+set wildmode=list:longest		"ファイル名のタブ補完 wildmenuとセット
 set encoding=utf-8				"vimの内部文字コード
 set fileencodings=iso-2022-jp,cp932,sjis,euc-jp,utf-8	"読み込み時の文字コード 左から試す
 set tags+=tags					"tagファイルを親ディレクトリへ探しに行く
