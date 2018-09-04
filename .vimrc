@@ -1,5 +1,26 @@
-"標準的な設定-----------------------------------------------
 set nocompatible		"viと互換性をとらない
+
+"プラグインマネージャーVundle設定*******************************************************
+" ファイル形式の検出を無効
+filetype off
+
+" Vundle を初期化
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" Vundle も
+Bundle 'gmarik/vundle'
+
+" 他の プラグイン
+Bundle 'majutsushi/tagbar'
+Bundle 'Shougo/unite.vim'
+Bundle 'Shougo/vimfiler'
+
+" ファイルタイプ、プラグイン、インデントを ON
+filetype plugin indent on 
+
+"その他のカスタム設定を以下に書く******************************************************
+"標準的な設定-----------------------------------------------
 set number				"行番号を表示
 set title				"ターミナルのタイトルをセット
 set ambiwidth=double	"全角文字の幅を2に固定
