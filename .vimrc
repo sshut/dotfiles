@@ -9,18 +9,20 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 " Vundle も
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/vundle'
 
 " 他の プラグイン
-Bundle 'majutsushi/tagbar'
-Bundle 'Shougo/unite.vim'
-Bundle 'Shougo/vimfiler'
+Plugin 'majutsushi/tagbar'
+Plugin 'Shougo/unite.vim'
+Plugin 'Shougo/vimfiler'
 
 " ファイルタイプ、プラグイン、インデントを ON
 filetype plugin indent on 
 
-"vimfiler用のカスタム---
+"vimfiler用のカスタム-----------------
 let g:vimfiler_as_default_explorer=1	"vimfilerをデフォルトにする。:e .でvimfilerが開く
+ "Ctrl f i でIDE風にvimfilerを開く
+noremap <C-F><C-I> :VimFiler -split -simple -winwidth=30 -no-quit<ENTER>
 
 "その他のカスタム設定を以下に書く******************************************************
 "標準的な設定-----------------------------------------------
@@ -83,7 +85,7 @@ set wildignorecase				"ファイル名のタブ保管時に大文字小文字を区別しない wildmenu
 set wildmode=list:longest		"ファイル名のタブ補完 wildmenuとセット
 set encoding=utf-8				"vimの内部文字コード
 set fileencodings=iso-2022-jp,cp932,sjis,euc-jp,utf-8	"読み込み時の文字コード 左から試す
-set tags+=tags					"tagファイルを親ディレクトリへ探しに行く
+"set tags+=tags					"(ctags用のため、gtagsでは必要ない)tagファイルを親ディレクトリへ探しに行く
 "let Tlist_Use_Right_Window = 1                    "右側にtag listのウインドうを表示する
 "let Tlist_Exit_OnlyWindow = 1                      "taglistのウインドウだけならVimを閉じる
 
