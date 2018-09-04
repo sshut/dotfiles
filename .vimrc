@@ -19,6 +19,9 @@ Bundle 'Shougo/vimfiler'
 " ファイルタイプ、プラグイン、インデントを ON
 filetype plugin indent on 
 
+"vimfiler用のカスタム---
+let g:vimfiler_as_default_explorer=1	"vimfilerをデフォルトにする。:e .でvimfilerが開く
+
 "その他のカスタム設定を以下に書く******************************************************
 "標準的な設定-----------------------------------------------
 set number				"行番号を表示
