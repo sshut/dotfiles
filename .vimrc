@@ -8,13 +8,14 @@ filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-" Vundle も
+" Vundle もここに記載
 Plugin 'gmarik/vundle'
 
-" 他の プラグイン
+" 以下にプラグインを追加する
 Plugin 'majutsushi/tagbar'
 Plugin 'Shougo/unite.vim'
 Plugin 'Shougo/vimfiler'
+Plugin 'vim-scripts/gtags.vim'
 
 " ファイルタイプ、プラグイン、インデントを ON
 filetype plugin indent on 
