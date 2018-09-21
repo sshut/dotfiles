@@ -11,11 +11,16 @@ call vundle#rc()
 " Vundle もここに記載
 Plugin 'gmarik/vundle'
 
-" 以下にプラグインを追加する
-Plugin 'majutsushi/tagbar'
+"インストール、更新/削除コマンド
+	"vim上で
+	":VundleInstall
+	":VundleClean
+" 以下にプラグインを追加していく
+"Plugin 'majutsushi/tagbar'
 Plugin 'Shougo/unite.vim'
 Plugin 'Shougo/vimfiler'
 Plugin 'vim-scripts/gtags.vim'
+Plugin 'vim-scripts/taglist.vim'
 
 " ファイルタイプ、プラグイン、インデントを ON
 filetype plugin indent on 
@@ -87,8 +92,11 @@ set wildmode=list:longest		"ファイル名のタブ補完 wildmenuとセット
 set encoding=utf-8				"vimの内部文字コード
 set fileencodings=iso-2022-jp,cp932,sjis,euc-jp,utf-8	"読み込み時の文字コード 左から試す
 "set tags+=tags					"(ctags用のため、gtagsでは必要ない)tagファイルを親ディレクトリへ探しに行く
-"let Tlist_Use_Right_Window = 1                    "右側にtag listのウインドうを表示する
-"let Tlist_Exit_OnlyWindow = 1                      "taglistのウインドウだけならVimを閉じる
+
+let Tlist_Auto_Open = 1			"ファイルを開いたときにtaglistを開く
+let Tlist_Use_Right_Window = 1	"右側にtag listのウインドうを表示する
+let Tlist_Exit_OnlyWindow = 1	"taglistのウインドウだけならVimを閉じる
+"let tlist_cpp_settings = 'c++;c:class;f:function'
 
 " grでカーソル下のキーワードをvimgrep------------------------
 " nnoremap <expr> gr ':vimgrep ;\<' . expand('<cword>') . '\>; **/*.c **/*.cpp **/*.h \| cw'
@@ -152,4 +160,7 @@ map <C-n> :cn<CR>
 map <C-p> :cp<CR>
 map <C-g> :Gtags
 
+"taglist用---------------------------
+"\tでtaglistを開く
+nnoremap <silent> <leader>t :TlistOpen<CR>
 
