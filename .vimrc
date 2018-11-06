@@ -93,7 +93,8 @@ set encoding=utf-8				"vimの内部文字コード
 set fileencodings=iso-2022-jp,cp932,sjis,euc-jp,utf-8	"読み込み時の文字コード 左から試す
 "set tags+=tags					"(ctags用のため、gtagsでは必要ない)tagファイルを親ディレクトリへ探しに行く
 
-let Tlist_Auto_Open = 1			"ファイルを開いたときにtaglistを開く
+"Taglistプラグインの設定
+"let Tlist_Auto_Open = 1			"ファイルを開いたときにtaglistを開く
 let Tlist_Use_Right_Window = 1	"右側にtag listのウインドうを表示する
 let Tlist_Exit_OnlyWindow = 1	"taglistのウインドウだけならVimを閉じる
 "let tlist_cpp_settings = 'c++;c:class;f:function'
