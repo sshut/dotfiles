@@ -1,6 +1,6 @@
-#$BJd40;~BgJ8;z>.J8;z$rL5;k(B
+#補完時大文字小文字を無視
 set completion-ignore-case on 
 
-# $BF~NO8uJd%j%9%H$N%G%#%l%/%H%j$d<B9T2DG=%U%!%$%k$K0u$r$D$1$k(B
+# 入力候補リストのディレクトリや実行可能ファイルに印をつける
 set show-all-if-ambiguous on
 set visible-stats on
