@@ -50,7 +50,6 @@ autocmd ColorScheme * highlight Comment ctermfg=34 guifg=#008800
 
 "タブ、空白、改行の可視化--------------
 set list				"空白文字の可視化
-"set listchars=tab:ﾂｻ_,trail:-,extends:ﾂｻ,precedes:ﾂｫ,nbsp:% "空白文字の表示形式
 set listchars=tab:>\ "二文字目を消すにはバックスラッシュのあとにコメントが必須
 "タブの色
 "autocmd ColorScheme * highlight SpecialKey ctermfg=238 guifg=#008800
@@ -65,6 +64,7 @@ autocmd ColorScheme * highlight CursorLine cterm=underline ctermfg=NONE ctermbg=
 "カラースキーマの指定
 colorscheme molokai
 "colorscheme moonshine
+
 
 "ステータスバー関連----------------------------------------
 set statusline=%F				" ファイル名表示
