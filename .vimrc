@@ -41,6 +41,7 @@ set shiftwidth=4		"vimが自動生成するタブ幅をスペース4つ分にす
 set smartindent			"自動インデント
 "set nobackup			"bバックアップをとらない
 set nowrap				"画面端で折り返さない
+set belloff=all			"ビープ音を消す"
 
 "色関連の設定--------------------------------------------
  "コメントを濃い緑にする colorschemeの前に設定する必要あり
