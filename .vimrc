@@ -47,6 +47,8 @@ set nowrap				"画面端で折り返さない
    "ctermfg:ターミナルの色
    "guifg:GUI版Vimの前景色
 autocmd ColorScheme * highlight Comment ctermfg=34 guifg=#008800 
+autocmd ColorScheme * highlight StatusLine ctermfg=234 ctermbg=black guifg=#008800 
+
 
 "タブ、空白、改行の可視化--------------
 set list				"空白文字の可視化
