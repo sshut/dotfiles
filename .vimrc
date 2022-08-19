@@ -20,7 +20,7 @@ Plugin 'gmarik/vundle'
 Plugin 'Shougo/unite.vim'
 Plugin 'Shougo/vimfiler'
 Plugin 'vim-scripts/gtags.vim'
-Plugin 'vim-scripts/taglist.vim'
+"Plugin 'vim-scripts/taglist.vim'
 
 " ファイルタイプ、プラグイン、インデントを ON
 filetype plugin indent on 
