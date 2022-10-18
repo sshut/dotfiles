@@ -172,5 +172,6 @@ map <C-g> :Gtags
 "\tでtaglistを開く
 nnoremap <silent> <leader>t :TlistOpen<CR>
 
-
+"vimgreq時にQuickfixWindowを自動で開く
+autocmd QuickFixCmdPost *grep* cwindow
 
