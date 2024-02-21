@@ -1,0 +1,25 @@
+defutf8 on
+defencoding utf8
+encoding utf8 utf8
+
+#起動時のメッセージ
+startup_message off
+#エラー時の画面フラッシュ
+vbell off
+
+# ステータスライン
+#hardstatus alwayslastline "%{= cd} %-w%{= dd} %n %t* %{-}%+w"
+#hardstatus alwayslastline "%{= d} %-w%{= dd} %n %t* %{-}%+w"
+hardstatus alwayslastline "%-w%{= ck}%n %t%{-}%+w"
+
+# マウススクロール
+termcapinfo xterm* ti@:te@
+
+# スクロール行数
+defscrollback 10000
+
+# vimとかlessとかtigとかのバッファを終了時に消す
+altscreen on
+
+# デフォルトシェル
+shell $SHELL
