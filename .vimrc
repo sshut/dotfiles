@@ -93,7 +93,8 @@ set wildignorecase				"ファイル名のタブ保管時に大文字小文字を
 "set wildmode=longest,full		"ファイル名のタブ補完 wildmenuとセット
 set wildmode=list:longest		"ファイル名のタブ補完 wildmenuとセット
 set encoding=utf-8				"vimの内部文字コード
-set fileencodings=iso-2022-jp,cp932,sjis,euc-jp,utf-8	"読み込み時の文字コード 左から試す
+"set fileencodings=iso-2022-jp,cp932,sjis,euc-jp,utf-8	"読み込み時の文字コード 左から試す
+set fileencodings=utf-8,iso-2022-jp,cp932,sjis,euc-jp	"読み込み時の文字コード 左から試す
 "set tags+=tags					"(ctags用のため、gtagsでは必要ない)tagファイルを親ディレクトリへ探しに行く
 
 "Taglistプラグインの設定
